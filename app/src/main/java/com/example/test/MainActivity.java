@@ -23,12 +23,6 @@ public class MainActivity extends AppCompatActivity {
         context = this;
         DB.makeDB(context);
 
-        int coin = SP.getCoin(context);
-
-        String background = SP.getBackground(context);
-
-        int messagecount = SP.getMessageCount(context);
-
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
