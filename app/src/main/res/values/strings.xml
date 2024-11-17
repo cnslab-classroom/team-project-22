@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">test</string>
+    <string name="app_name">행복 저금통</string>
+    <!-- 색상 목록 추가 -->
+    <string-array name="color_list">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Pink</item>
+    </string-array>
 </resources>
