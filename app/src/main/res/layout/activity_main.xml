@@ -39,7 +39,7 @@
         android:layout_gravity="center"
         android:text="행복 저금통"
         android:textColor="#705C53"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
