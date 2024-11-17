@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">행복 저금통</string>
+    <string name="gold">gold</string>
+    <string name="_30">30 골드</string>
     <!-- 색상 목록 추가 -->
     <string-array name="color_list">
         <item>Red</item>

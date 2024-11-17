@@ -5,6 +5,17 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton3" />
+
+    <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/gold"
+        android:id="@+id/shop"
         android:contentDescription="골드 버튼"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,13 +43,13 @@
         android:id="@+id/gold_view"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:text="100 골드"
+        android:text="@string/gold"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toEndOf="@+id/gold"
+        app:layout_constraintStart_toEndOf="@+id/shop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.039" />
 
@@ -57,7 +68,7 @@
         android:id="@+id/purchaseButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="구매하기 (0 골드)"
+        android:text="구매하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +89,7 @@
         android:id="@+id/purchaseButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="구매하기 (20 골드)"
+        android:text="구매하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +110,7 @@
         android:id="@+id/purchaseButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="구매하기 (30 골드)"
+        android:text="구매하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +131,7 @@
         android:id="@+id/purchaseButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="구매하기 (50 골드)"
+        android:text="구매하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,5 +150,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="0 골드"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="20 골드"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.788"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 골드"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
