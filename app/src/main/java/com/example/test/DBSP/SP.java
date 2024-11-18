@@ -18,6 +18,9 @@ public class SP {
         editor.remove("button2");
         editor.remove("button3");
         editor.remove("button4");
+        editor.remove("messagecount");
+        editor.remove("count");
+        editor.remove("num");
         editor.remove("coin");  // 골드 삭제
         editor.apply();  // 변경 사항 적용
     }
@@ -42,6 +45,33 @@ public class SP {
     }
 
 
+    public static void setDate(Context context, String datekey, String text)
+    {
+        SharedPreferences prefs = getPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(datekey, text);
+        editor.apply();
+    }
+
+    public static String getDate(Context context, String dateKey){
+        SharedPreferences prefs = getPreferences(context);
+        return prefs.getString(dateKey, DEFAULT_VALUE_STRING);
+    }
+
+    public static void setEvent(Context context, String eventkey, String text)
+    {
+        SharedPreferences prefs = getPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(eventkey, text);
+        editor.apply();
+    }
+
+    public static String getEvent(Context context, String eventKey){
+        SharedPreferences prefs = getPreferences(context);
+        return prefs.getString(eventKey, DEFAULT_VALUE_STRING);
+    }
+
+
     public static void setCoin(Context context, String coinkey, int coin) {
         SharedPreferences prefs = getPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
@@ -49,6 +79,7 @@ public class SP {
         editor.apply();
     }
 
+    //저금통
     public static void setBackground(Context context,String backkey ,String background) {
         SharedPreferences prefs = getPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
@@ -56,10 +87,18 @@ public class SP {
         editor.apply();
     }
 
-    public static void setMessageCount(Context context, int MessageCount) {
+    public static void setbankBackground(Context context,String messagekey ,String bankbackground) {
         SharedPreferences prefs = getPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt("MessageCount", MessageCount);
+        editor.putString(messagekey, bankbackground);
+        editor.apply();
+    }
+
+    //그냥 숫자랑 혼용해서 쓰는 DB
+    public static void setMessageCount(Context context, String numkey,int MessageCount) {
+        SharedPreferences prefs = getPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(numkey, MessageCount);
         editor.apply();
     }
 
@@ -68,14 +107,15 @@ public class SP {
         return prefs.getInt(coinkey, 100);
     }
 
+    //저금통
     public static String getBackground(Context context, String backkey){
         SharedPreferences prefs = getPreferences(context);
         return prefs.getString(backkey, DEFAULT_VALUE_STRING);
     }
 
-    public static int getMessageCount(Context context){
+    public static int getMessageCount(Context context, String numkey){
         SharedPreferences prefs = getPreferences(context);
-        return prefs.getInt("MessageCount", DEFAULT_VALUE_INT);
+        return prefs.getInt(numkey, DEFAULT_VALUE_INT);
     }
 
 }

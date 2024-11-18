@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/dateView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/purchaseButton1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/dateView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -174,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@+id/purchaseButton2" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/dateView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50 골드"

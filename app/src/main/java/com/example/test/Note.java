@@ -1,34 +1,35 @@
 //Note.java
 package com.example.test;
 
-public class Note {
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
 
-    private String date;  // 쪽지 날짜
-    private String content;  // 쪽지 내용
+import androidx.appcompat.app.AppCompatActivity;
 
-    // 생성자
-    public Note(String date, String content) {
-        this.date = date;
-        this.content = content;
-    }
+import com.example.test.DBSP.SP;
 
-    // 날짜를 반환하는 메서드
-    public String getDate() {
-        return date;
-    }
+public class Note extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.note_item);
 
-    // 내용을 반환하는 메서드
-    public String getContent() {
-        return content;
-    }
 
-    // 날짜와 내용 설정하는 setter 메서드 (선택 사항)
-    public void setDate(String date) {
-        this.date = date;
-    }
+        Intent intent = getIntent();
+        int value = intent.getIntExtra("value",0);
+        String date = SP.getDate(this,"date"+value);
 
-    public void setContent(String content) {
-        this.content = content;
+        String event = SP.getEvent(this,"event"+value);
+
+        // TextView에 편지 내용 표시
+        TextView notesTextView = findViewById(R.id.dateTextView);
+        notesTextView.setText("날짜 : " + date);
+
+        TextView eventTextView = findViewById(R.id.contentTextView);
+        eventTextView.setText(event);
     }
 }
+
+
 

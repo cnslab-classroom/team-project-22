@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/letter_num2"
+        android:id="@+id/message_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="쪽지 수"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.511" />
 
     <Button
-        android:id="@+id/letter_open_button"
+        android:id="@+id/message_open_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="저금통 열기"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/write_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="쪽지 적기"
