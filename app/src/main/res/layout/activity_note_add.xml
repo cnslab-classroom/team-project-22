@@ -20,39 +20,40 @@
         android:layout_marginBottom="20dp" />
 
     <!-- 쪽지 입력 창 -->
+
     <LinearLayout
         android:id="@+id/noteLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/round_border"
-        android:padding="20dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <!-- 날짜 입력 -->
         <EditText
             android:id="@+id/dateInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:hint="날짜"
             android:inputType="text"
-            android:padding="15dp"
-            android:layout_marginBottom="16dp" />
+            android:padding="15dp" />
 
         <!-- 행복했던 일 입력 -->
         <EditText
             android:id="@+id/happyEventInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="top|start"
             android:hint="행복했던 일"
             android:inputType="textMultiLine"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp"
             android:minHeight="300dp"
-            android:gravity="top|start" />
+            android:padding="10dp" />
     </LinearLayout>
 
     <Spinner

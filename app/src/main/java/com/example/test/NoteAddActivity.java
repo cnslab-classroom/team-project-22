@@ -22,10 +22,10 @@ public class NoteAddActivity extends AppCompatActivity {
     private LinearLayout noteLayout; // LinearLayout 객체로 선언
     private EditText dateInput, happyEventInput;
 
-    private int num=0;
-    private int eventnum =0;
-    private int messagecount=0;
-    private String selectedColor = "White";
+    private int num=1;
+    private int messagenum=0;
+
+    private String DBColor = "White";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +41,7 @@ public class NoteAddActivity extends AppCompatActivity {
         dateInput = findViewById(R.id.dateInput);
         happyEventInput = findViewById(R.id.happyEventInput);
         updatenum();
-        updateeventnum();
-        updatemessagecount();
+        updatemessagenum();
 
         //추가버튼 누르면
         ImageButton addButton = findViewById(R.id.addButton);
@@ -53,22 +52,23 @@ public class NoteAddActivity extends AppCompatActivity {
               String date = dateInput.getText().toString();
               String happyEvent = happyEventInput.getText().toString();
 
-              String datekey = "date" + num;
-              String eventkey = "event"+eventnum;
-
+              String datekey = "date"+num;
+              String eventkey = "event"+num;
+              String colorkey = "color"+num;
               num++;
-              SP.setMessageCount(NoteAddActivity.this,"num",num);
-              eventnum++;
-              SP.setMessageCount(NoteAddActivity.this,"eventnum",eventnum);
-              messagecount++;
-              SP.setMessageCount(NoteAddActivity.this,"messagecount",messagecount);
-
+              messagenum++;
+              SP.setvalue(NoteAddActivity.this,"num",num);
+              SP.setMessageCount(NoteAddActivity.this,"messagenum",messagenum);
               SP.setDate(NoteAddActivity.this, datekey,date);
               SP.setEvent(NoteAddActivity.this,eventkey,happyEvent);
-
-              //SP.setBackground(NoteAddActivity.this,"color"+num,selectedColor);
+              SP.setmessageBackground(NoteAddActivity.this,colorkey,DBColor);
 
               Toast.makeText(NoteAddActivity.this, "추가되었습니다", Toast.LENGTH_SHORT).show();
+
+              if (messagenum >= 5)
+              {
+                  Toast.makeText(NoteAddActivity.this, "목표값에 도달하였습니다. 저금통을 열어보세요!", Toast.LENGTH_SHORT).show();
+              }
 
               addButton.setVisibility(View.GONE);
           } });
@@ -78,7 +78,7 @@ public class NoteAddActivity extends AppCompatActivity {
 
         backButton.setOnClickListener(v -> finish());
 
-                // 색상 목록을 Spinner에 추가
+        // 색상 목록을 Spinner에 추가
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.color_list, // 색상 목록 배열 (res/values/strings.xml)
@@ -105,40 +105,40 @@ public class NoteAddActivity extends AppCompatActivity {
         });
     }
 
-    private void updatemessagecount()
-    {
-        messagecount = SP.getMessageCount(this,"messagecount");
-    }
-
-    private void updateeventnum() {
-        eventnum = SP.getMessageCount(this,"eventnum");
-    }
-
     private void updatenum() {
-        num=SP.getMessageCount(this,"num");
+        num=SP.getvalue(this,"num");
     }
 
+    private void updatemessagenum() {
+        messagenum=SP.getMessageCount(this,"messagenum");
+    }
 
     // 선택된 색상에 따라 배경색을 변경하는 메소드
     private void changeNoteBackgroundColor(String color) {
         switch (color) {
             case "Red":
                 noteLayout.setBackgroundColor(Color.RED);
+                DBColor = "Red";
                 break;
             case "Green":
                 noteLayout.setBackgroundColor(Color.GREEN);
+                DBColor = "Green";
                 break;
             case "Blue":
                 noteLayout.setBackgroundColor(Color.BLUE);
+                DBColor = "Blue";
                 break;
             case "Yellow":
                 noteLayout.setBackgroundColor(Color.YELLOW);
+                DBColor = "Yellow";
                 break;
-            case "Pink":
+            case "Magenta":
                 noteLayout.setBackgroundColor(Color.MAGENTA);
+                DBColor = "Magenta";
                 break;
             default:
                 noteLayout.setBackgroundColor(Color.WHITE);
+                DBColor = "White";
                 break;
         }
     }

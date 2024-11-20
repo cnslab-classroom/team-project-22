@@ -9,6 +9,7 @@
     android:background="@android:color/white"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/message_count"
         android:layout_width="wrap_content"
@@ -19,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.88" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -108,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="shop"
+        android:text="상점"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"

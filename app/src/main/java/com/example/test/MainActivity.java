@@ -1,7 +1,6 @@
 package com.example.test;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView message_count;
     private int gold;
     private ImageView backgroundImageView;
-    private int messagecount;
+    private int messagenum=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +59,12 @@ public class MainActivity extends AppCompatActivity {
         openButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (messagecount >= 1) {
+                if (messagenum >= 5) {
                     // NoteAddActivity로 이동하는 인텐트 생성
                     Intent intent = new Intent(MainActivity.this, NoteListActivity.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(MainActivity.this,"쪽지가 5개 이상 찰 시 확인가능합니다.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"쪽지가 5개 이상 찰 시 확인가능합니다. 쪽지를 적어주세요!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -86,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
         goldView = findViewById(R.id.gold_view);
         message_count = findViewById(R.id.message_count);
-
         // coin DB에서 가져옴
         gold = SP.getCoin(this,"coin");
 
@@ -119,13 +117,17 @@ public class MainActivity extends AppCompatActivity {
         gold = SP.getCoin(this,"coin");  // 골드를 갱신
         updategoldView();
         restoreBackgound();  // 갱신된 골드를 화면에 표시
-        updatemessagecount();
+        updatemessagenum();
     }
 
-    private void updatemessagecount() {
-        messagecount = SP.getMessageCount(this,"messagecount");
-        message_count.setText("쪽지 수 :" + messagecount);
+
+
+    private void updatemessagenum() {
+        messagenum = SP.getMessageCount(this, "messagenum");
+        message_count.setText("쪽지 수 :"+messagenum);
     }
+
+
 
     private void updategoldView() {
         goldView.setText("Gold :" + gold);

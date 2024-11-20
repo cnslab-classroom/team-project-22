@@ -8,6 +8,33 @@ public class SP {
     private static final int DEFAULT_VALUE_INT = 0;
     private static final String DEFAULT_VALUE_STRING = "";
 
+
+    public static void clearmessage(Context context)
+    {
+        SharedPreferences prefs = getPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        editor.remove("date1");
+        editor.remove("event1");
+        editor.remove("date2");
+        editor.remove("event2");
+        editor.remove("date3");
+        editor.remove("event3");
+        editor.remove("date4");
+        editor.remove("event4");
+        editor.remove("date5");
+        editor.remove("event5");
+        editor.remove("date6");
+        editor.remove("event6");
+        editor.remove("color1");
+        editor.remove("color2");
+        editor.remove("color3");
+        editor.remove("color4");
+        editor.remove("color5");
+        editor.remove("color6");
+    }
+
+
     //test용 함수
     public static void clearData(Context context) {
         SharedPreferences prefs = getPreferences(context);
@@ -18,8 +45,26 @@ public class SP {
         editor.remove("button2");
         editor.remove("button3");
         editor.remove("button4");
-        editor.remove("messagecount");
-        editor.remove("count");
+        editor.remove("date1");
+        editor.remove("event1");
+        editor.remove("date2");
+        editor.remove("event2");
+        editor.remove("date3");
+        editor.remove("event3");
+        editor.remove("date4");
+        editor.remove("event4");
+        editor.remove("date5");
+        editor.remove("event5");
+        editor.remove("date6");
+        editor.remove("event6");
+        editor.remove("color1");
+        editor.remove("color2");
+        editor.remove("color3");
+        editor.remove("color4");
+        editor.remove("color5");
+        editor.remove("color6");
+
+        editor.remove("messagenum");
         editor.remove("num");
         editor.remove("coin");  // 골드 삭제
         editor.apply();  // 변경 사항 적용
@@ -87,11 +132,16 @@ public class SP {
         editor.apply();
     }
 
-    public static void setbankBackground(Context context,String messagekey ,String bankbackground) {
+    public static void setmessageBackground(Context context,String messagekey ,String bankbackground) {
         SharedPreferences prefs = getPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(messagekey, bankbackground);
         editor.apply();
+    }
+
+    public static String getmessageBackground(Context context, String messageKey){
+        SharedPreferences prefs = getPreferences(context);
+        return prefs.getString(messageKey, DEFAULT_VALUE_STRING);
     }
 
     //그냥 숫자랑 혼용해서 쓰는 DB
@@ -102,9 +152,21 @@ public class SP {
         editor.apply();
     }
 
+    public static void setvalue(Context context, String valuekey,int value) {
+        SharedPreferences prefs = getPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(valuekey, value);
+        editor.apply();
+    }
+
+    public static int getvalue(Context context, String valuekey){
+        SharedPreferences prefs = getPreferences(context);
+        return prefs.getInt(valuekey, 1);
+    }
+
     public static int getCoin(Context context, String coinkey){
         SharedPreferences prefs = getPreferences(context);
-        return prefs.getInt(coinkey, 100);
+        return prefs.getInt(coinkey, 0);
     }
 
     //저금통

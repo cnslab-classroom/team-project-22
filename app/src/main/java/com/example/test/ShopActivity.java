@@ -79,7 +79,7 @@ public class ShopActivity extends AppCompatActivity {
 
             if (button.getText().toString().equals("구매하기")) {
                 // 구매 성공: 골드 차감 및 버튼 텍스트 변경
-                if (gold <= cost)
+                if (gold < cost)
                 {
                     Toast.makeText(this, "돈이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }

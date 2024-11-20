@@ -2,7 +2,10 @@
 package com.example.test;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,19 +20,52 @@ public class Note extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        int value = intent.getIntExtra("value",0);
+        int value = intent.getIntExtra("value",1);
+
+        LinearLayout linearLayout = findViewById(R.id.background);
+
         String date = SP.getDate(this,"date"+value);
 
         String event = SP.getEvent(this,"event"+value);
 
-        // TextView에 편지 내용 표시
+        String back_ground = SP.getmessageBackground(this,"color"+value);
+
+        // 데이터 검증 및 로그 출력
+        if (date == null || date.isEmpty()) {
+            Log.d("NoteDebug", "Date not found for key: date" + value);
+            date = "날짜 없음";
+        }
+        if (event == null || event.isEmpty()) {
+            Log.d("NoteDebug", "Event not found for key: event" + value);
+            event = "내용 없음";
+        }
+
+
+
+        linearLayout.setBackgroundColor(getColorFromName(back_ground));
+
         TextView notesTextView = findViewById(R.id.dateTextView);
         notesTextView.setText("날짜 : " + date);
 
         TextView eventTextView = findViewById(R.id.contentTextView);
         eventTextView.setText(event);
     }
-}
 
+    private int getColorFromName(String colorName) {
+        switch (colorName) {
+            case "Red":
+                return Color.RED;
+            case "Green":
+                return Color.GREEN;
+            case "Blue":
+                return Color.BLUE;
+            case "Yellow":
+                return Color.YELLOW;
+            case "Magenta":
+                return Color.MAGENTA;
+            default:
+                return Color.WHITE;
+        }
+}}
 
 

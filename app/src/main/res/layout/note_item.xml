@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
     android:layout_width="200dp"
     android:layout_height="200dp"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:layout_marginBottom="12dp"
-    android:background="#E7CCCC"
-    android:weightSum="1"
     android:layout_gravity="center"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:elevation="0dp">
+    android:layout_marginBottom="12dp"
+    android:background="#E7CCCC"
+    android:elevation="0dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2024-11-15"
-        android:textSize="20sp"
-        android:textColor="#333333"
         android:layout_marginBottom="10dp"
+        android:text="2024-11-15"
+        android:textColor="#333333"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/contentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="내용"
-        android:textSize="16sp"
-        android:textColor="#333333"
         android:layout_marginBottom="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:ellipsize="end"
+        android:gravity="start"
         android:lineSpacingExtra="4dp"
         android:maxLines="3"
-        android:ellipsize="end"
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
+        android:text="내용"
         android:textAppearance="?android:textAppearanceMedium"
-        android:background="?android:attr/selectableItemBackground"
-        android:gravity="start"/>
+        android:textColor="#333333"
+        android:textSize="16sp" />
 </LinearLayout>
