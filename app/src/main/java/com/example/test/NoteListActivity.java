@@ -31,7 +31,6 @@ public class NoteListActivity extends AppCompatActivity {
         ImageButton Imagebtn3 = findViewById(R.id.imageButton3);
         ImageButton Imagebtn4 = findViewById(R.id.imageButton4);
         ImageButton Imagebtn5 = findViewById(R.id.imageButton5);
-        ImageButton Imagebtn6 = findViewById(R.id.imageButton6);
 
 
         Imagebtn1.setOnClickListener(v -> {
@@ -69,13 +68,6 @@ public class NoteListActivity extends AppCompatActivity {
             // Note.java로 이동하는 Intent 생성
             Intent intent = new Intent(NoteListActivity.this, Note.class);
             intent.putExtra("value", 5);
-            startActivity(intent);
-        });
-
-        Imagebtn6.setOnClickListener(v -> {
-            // Note.java로 이동하는 Intent 생성
-            Intent intent = new Intent(NoteListActivity.this, Note.class);
-            intent.putExtra("value", 6);
             startActivity(intent);
         });
 
