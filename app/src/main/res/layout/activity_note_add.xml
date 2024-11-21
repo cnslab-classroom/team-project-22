@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="속마음을 저금하세요!"
+        android:fontFamily="@font/fontttf"
         android:textSize="30sp"
         android:textColor="#705C53"
         android:textStyle="bold"
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="날짜"
+            android:fontFamily="@font/fontttf"
             android:inputType="text"
             android:padding="15dp" />
 
@@ -51,6 +53,7 @@
             android:layout_marginBottom="16dp"
             android:gravity="top|start"
             android:hint="속마음"
+            android:fontFamily="@font/fontttf"
             android:inputType="textMultiLine"
             android:minHeight="300dp"
             android:padding="10dp" />
@@ -61,6 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:entries="@array/color_list"
+        android:fontFamily="@font/fontttf"
         app:layout_constraintTop_toBottomOf="@id/happyEventInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +89,8 @@
             android:layout_gravity="start"
             android:scaleType="centerInside"
             android:layout_weight="1"
-            android:contentDescription="뒤로 가기 버튼" />
+            android:contentDescription="뒤로 가기 버튼"
+            android:fontFamily="@font/fontttf"/>
 
         <!-- 추가 버튼 -->
         <ImageButton
