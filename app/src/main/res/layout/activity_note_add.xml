@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="행복을 저금하세요!"
+        android:text="속마음을 저금하세요!"
         android:textSize="30sp"
         android:textColor="#705C53"
         android:textStyle="bold"
@@ -43,14 +43,14 @@
             android:inputType="text"
             android:padding="15dp" />
 
-        <!-- 행복했던 일 입력 -->
+        <!-- 속마음 입력 -->
         <EditText
             android:id="@+id/happyEventInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:gravity="top|start"
-            android:hint="행복했던 일"
+            android:hint="속마음"
             android:inputType="textMultiLine"
             android:minHeight="300dp"
             android:padding="10dp" />

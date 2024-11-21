@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="행복했던 순간들을 모아봐요!"
+        android:text="속마음 쪽지를 모아봐요!"
         android:textColor="#705C53"
         android:textSize="30sp"
         android:textStyle="bold"

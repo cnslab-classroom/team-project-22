@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //쪽지쓰기 버튼
-        Button writeButton = findViewById(R.id.write_button);
+        ImageButton writeButton = findViewById(R.id.write_button);
         writeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
