@@ -24,14 +24,11 @@ public class SP {
         editor.remove("event4");
         editor.remove("date5");
         editor.remove("event5");
-        editor.remove("date6");
-        editor.remove("event6");
         editor.remove("color1");
         editor.remove("color2");
         editor.remove("color3");
         editor.remove("color4");
         editor.remove("color5");
-        editor.remove("color6");
     }
 
 
@@ -55,14 +52,11 @@ public class SP {
         editor.remove("event4");
         editor.remove("date5");
         editor.remove("event5");
-        editor.remove("date6");
-        editor.remove("event6");
         editor.remove("color1");
         editor.remove("color2");
         editor.remove("color3");
         editor.remove("color4");
         editor.remove("color5");
-        editor.remove("color6");
 
         editor.remove("messagenum");
         editor.remove("num");

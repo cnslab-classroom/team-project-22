@@ -27,6 +27,10 @@ public class NoteAddActivity extends AppCompatActivity {
     private String DBColor = "White";
 
     @Override
+    public void onBackPressed() {
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_add);

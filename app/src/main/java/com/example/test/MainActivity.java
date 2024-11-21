@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageView backgroundImageView;
     private int messagenum=0;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +49,22 @@ public class MainActivity extends AppCompatActivity {
         writeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (messagenum >= 5) {
+                    // 알림 표시하고 이벤트 종료
+                    Toast.makeText(MainActivity.this, "저금통부터 열어주세요!", Toast.LENGTH_SHORT).show();
+                    return; // 다음 코드 실행 방지
+                }
+
+
                 // NoteAddActivity로 이동하는 인텐트 생성
+
                 Intent intent = new Intent(MainActivity.this, NoteAddActivity.class);
                 startActivity(intent);
+
             }
         });
+
+
 
 
 
@@ -102,11 +116,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+
     }
 
 
 
-
+    @Override
+    public void onBackPressed() {
+    }
 
 
 
@@ -125,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
     private void updatemessagenum() {
         messagenum = SP.getMessageCount(this, "messagenum");
         message_count.setText("쪽지 수 :"+messagenum);
+
+
     }
 
 
