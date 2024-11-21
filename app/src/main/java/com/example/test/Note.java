@@ -54,15 +54,15 @@ public class Note extends AppCompatActivity {
     private int getColorFromName(String colorName) {
         switch (colorName) {
             case "Red":
-                return Color.RED;
+                return Color.rgb(255, 216, 216);
             case "Green":
-                return Color.GREEN;
+                return Color.rgb(183, 240, 177);
             case "Blue":
-                return Color.BLUE;
+                return Color.rgb(178, 235, 244);
             case "Yellow":
-                return Color.YELLOW;
+                return Color.rgb(250, 244, 192);
             case "Magenta":
-                return Color.MAGENTA;
+                return Color.rgb(255, 217, 250);
             default:
                 return Color.WHITE;
         }

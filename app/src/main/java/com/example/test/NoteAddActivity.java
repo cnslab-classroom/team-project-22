@@ -117,23 +117,23 @@ public class NoteAddActivity extends AppCompatActivity {
     private void changeNoteBackgroundColor(String color) {
         switch (color) {
             case "Red":
-                noteLayout.setBackgroundColor(Color.RED);
+                noteLayout.setBackgroundColor(Color.rgb(255, 216, 216));
                 DBColor = "Red";
                 break;
             case "Green":
-                noteLayout.setBackgroundColor(Color.GREEN);
+                noteLayout.setBackgroundColor(Color.rgb(183, 240, 177));
                 DBColor = "Green";
                 break;
             case "Blue":
-                noteLayout.setBackgroundColor(Color.BLUE);
+                noteLayout.setBackgroundColor(Color.rgb(178, 235, 244));
                 DBColor = "Blue";
                 break;
             case "Yellow":
-                noteLayout.setBackgroundColor(Color.YELLOW);
+                noteLayout.setBackgroundColor(Color.rgb(250, 244, 192));
                 DBColor = "Yellow";
                 break;
             case "Magenta":
-                noteLayout.setBackgroundColor(Color.MAGENTA);
+                noteLayout.setBackgroundColor(Color.rgb(255, 217, 250));
                 DBColor = "Magenta";
                 break;
             default:
