@@ -11,7 +11,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/_30"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/purchaseButton3" />
 
@@ -68,11 +68,36 @@
         android:id="@+id/purchaseButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="구매하기"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backgroundImage1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="0 골드"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton1" />
+
+    <Button
+        android:id="@+id/purchaseButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="구매하기"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroundImage3" />
 
     <ImageView
         android:id="@+id/backgroundImage2"
@@ -81,19 +106,20 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/potato_image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toEndOf="@id/backgroundImage1"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintHorizontal_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
-    <Button
-        android:id="@+id/purchaseButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="구매하기"
+    <ImageView
+        android:id="@+id/backgroundImage4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/dog_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/backgroundImage2" />
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@id/backgroundImage3"
+        app:layout_constraintTop_toBottomOf="@id/purchaseButton2" />
 
     <ImageView
         android:id="@+id/backgroundImage3"
@@ -106,38 +132,54 @@
         app:layout_constraintTop_toBottomOf="@id/purchaseButton1"
         app:layout_constraintHorizontal_bias="0.25" />
 
+    <!-- 뒤로 가기 버튼 -->
+
     <Button
-        android:id="@+id/purchaseButton3"
+        android:id="@+id/purchaseButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="구매하기"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/backgroundImage3" />
+        app:layout_constraintTop_toBottomOf="@id/backgroundImage2" />
 
-    <ImageView
-        android:id="@+id/backgroundImage4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/dog_image"
+    <TextView
+        android:id="@+id/dateView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="20 골드"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/backgroundImage3"
-        app:layout_constraintTop_toBottomOf="@id/purchaseButton2"
-        app:layout_constraintHorizontal_bias="0.75" />
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton2" />
+
+    <TextView
+        android:id="@+id/dateView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="50 골드"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseButton4" />
 
     <Button
         android:id="@+id/purchaseButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="구매하기"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backgroundImage4" />
 
-    <!-- 뒤로 가기 버튼 -->
     <ImageButton
         android:id="@+id/backButton"
         android:contentDescription="뒤로가기 버튼"
@@ -150,37 +192,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="0 골드"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/purchaseButton1" />
-
-    <TextView
-        android:id="@+id/dateView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="20 골드"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.788"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/purchaseButton2" />
-
-    <TextView
-        android:id="@+id/dateView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50 골드"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.786"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/purchaseButton4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

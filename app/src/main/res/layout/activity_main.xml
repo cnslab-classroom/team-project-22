@@ -54,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="저금통 열기"
+        android:backgroundTint="#CB9DF0"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.758"
@@ -94,8 +95,8 @@
 
     <ImageButton
         android:id="@+id/write_button"
-        android:layout_width="185dp"
-        android:layout_height="185dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:background="@drawable/message_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
