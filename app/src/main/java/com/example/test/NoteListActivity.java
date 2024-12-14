@@ -18,6 +18,11 @@ import com.example.test.DBSP.SP;
 public class NoteListActivity extends AppCompatActivity {
 
     @Override
+    public void onBackPressed() {
+    }
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_list);  // activity_note_list.xml을 사용하여 레이아웃 설정

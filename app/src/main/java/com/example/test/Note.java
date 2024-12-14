@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,9 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.test.DBSP.SP;
 
 public class Note extends AppCompatActivity {
+
     @Override
     public void onBackPressed() {
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,8 @@ public class Note extends AppCompatActivity {
         }
 
 
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
 
         linearLayout.setBackgroundColor(getColorFromName(back_ground));
 
